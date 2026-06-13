@@ -1,86 +1,83 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Share Your Feedback | Little Vietnam Colombo</title>
-<meta name="description" content="Tell us how we can do better at Little Vietnam Colombo. Your feedback goes straight to the restaurant.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Site Info | Little Vietnam Colombo</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8362a'/%3E%3Ctext x='50%25' y='54%25' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fcefe2' text-anchor='middle' dominant-baseline='middle'%3ELV%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#23170f;--ink-soft:#5a4a3e;--cream:#fbf4ea;--paper:#fffdfa;--accent:#c8362a;--line:#e7d8c6;--radius:16px;--display:'Familjen Grotesk',system-ui,sans-serif;--body:'Mulish',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.7}
+  a{color:var(--accent)}
+  h1,h2{font-family:var(--display);letter-spacing:-.01em}
+  .top{background:var(--ink);color:#fff;padding:18px 0}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none}
+  .brand .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);color:var(--cream);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+  main{padding:60px 0}
+  h1{font-size:2.2rem;margin-bottom:8px}
+  .muted{color:var(--ink-soft);margin-bottom:28px}
+  .note{background:#fff5e9;border:1px solid #f0d9b8;border-radius:var(--radius);padding:18px 20px;margin-bottom:28px;font-size:.95rem}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin-bottom:18px}
+  h2{font-size:1.1rem;margin-bottom:10px}
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  td{padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+  td:first-child{font-weight:700;color:var(--ink);width:42%}
+  ul{margin:8px 0 0 18px;color:var(--ink-soft)}
+  li{margin-bottom:6px}
+  footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;font-size:.86rem;color:var(--ink-soft)}
+</style>
 </head>
 <body>
+<div class="top"><div class="wrap"><a class="brand" href="index.html"><span class="mark">LV</span> Little Vietnam Colombo</a></div></div>
+<main>
+  <div class="wrap">
+    <h1>Site information</h1>
+    <p class="muted">A quick internal reference for this demo build.</p>
 
-<header class="nav scrolled">
-  <div class="wrap nav-inner">
-    <a class="brand" href="index.html"><span class="brand-badge">L</span><span class="brand-name">Little Vietnam<small>Colombo · Christchurch</small></span></a>
-    <div class="nav-cta"><a class="btn btn-ghost" href="index.html">← Back to site</a></div>
-  </div>
-</header>
+    <div class="note">
+      <strong>This is a demo.</strong> It was built to show Little Vietnam Colombo how a finished website could look and feel. Copy, photos, hours and the menu are illustrative placeholders — everything gets replaced with the real business details before going live.
+    </div>
 
-<section class="band ink" style="min-height:100svh;display:flex;align-items:center;padding-top:140px">
-  <div class="wrap" style="max-width:640px">
-    <div class="form-card" style="margin:0 auto" id="fbWrap">
-      <span class="eyebrow">We're listening</span>
-      <h3 style="margin-top:14px">Tell us what we could do better</h3>
-      <p class="sub">Thanks for being honest — your feedback comes straight to the kitchen and helps us put it right. It stays private.</p>
-      <form id="fbForm" action="https://formsubmit.co/littlevietnam.nz@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Private feedback — Little Vietnam Colombo">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none">
-        <div class="field-row">
-          <div class="field"><label for="name">Name</label><input id="name" name="Name" type="text" required placeholder="Your name"></div>
-          <div class="field"><label for="rating">Your rating</label><input id="rating" name="Rating" type="text" readonly placeholder="—"></div>
-        </div>
-        <div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" required placeholder="you@email.com"></div>
-        <div class="field"><label for="feedback">What happened?</label><textarea id="feedback" name="Feedback" required placeholder="Tell us about your visit — the dish, the wait, the service. We read every word."></textarea></div>
-        <button type="submit" class="btn btn-gold">Send feedback</button>
-        <p class="form-note">This goes privately to the restaurant — it won't be posted publicly.</p>
-      </form>
-      <div class="form-success" id="fbSuccess">
-        <div class="ok-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>Thank you</h3>
-        <p>We really appreciate you telling us. The team will read this and do better. — Little Vietnam Colombo</p>
-        <div style="margin-top:22px"><a class="btn btn-outline" href="index.html">Back to home</a></div>
-      </div>
+    <div class="card">
+      <h2>Business</h2>
+      <table>
+        <tr><td>Name</td><td>Little Vietnam Colombo</td></tr>
+        <tr><td>Type</td><td>Vietnamese restaurant &amp; takeaway</td></tr>
+        <tr><td>Location</td><td>Colombo Street, Christchurch Central, Ōtautahi</td></tr>
+        <tr><td>Phone</td><td><a href="tel:+64221887519">022 188 7519</a></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Placeholders to replace before launch</h2>
+      <ul>
+        <li>Real menu items, prices, dietary tags and any specials</li>
+        <li>Confirmed street address and exact opening hours</li>
+        <li>Business email address for the enquiry form</li>
+        <li>Real team names/roles (or keep the example team)</li>
+        <li>Real customer photos of the food and the space</li>
+        <li>Live Google review link on the review page</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Build notes</h2>
+      <table>
+        <tr><td>Design archetype</td><td>Fresh (warm cream, chilli-red accent)</td></tr>
+        <tr><td>Fonts</td><td>Familjen Grotesk + Mulish</td></tr>
+        <tr><td>Images</td><td>Unsplash (placeholder food photography)</td></tr>
+        <tr><td>Form handling</td><td>FormSubmit (swap to live email)</td></tr>
+      </table>
     </div>
   </div>
-</section>
-
-<script src="app.js"></script>
-<script>
-// Pre-fill rating from URL
-(function () {
-  var p = new URLSearchParams(window.location.search);
-  var r = p.get('rating');
-  var input = document.getElementById('rating');
-  if (r && /^[1-5]$/.test(r)) { input.value = '★'.repeat(+r) + ' (' + r + '/5)'; }
-  else { input.value = 'Not rated'; }
-})();
-// AJAX submit with inline success
-(function () {
-  var form = document.getElementById('fbForm');
-  var success = document.getElementById('fbSuccess');
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    var original = btn.textContent; btn.textContent = 'Sending…'; btn.disabled = true;
-    try {
-      var res = await fetch('https://formsubmit.co/ajax/littlevietnam.nz@gmail.com', {
-        method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form)
-      });
-      if (!res.ok) throw new Error('net');
-      form.style.display = 'none';
-      success.classList.add('show');
-    } catch (err) {
-      btn.textContent = original; btn.disabled = false;
-      alert('Sorry — something went wrong. Please call us on 022 188 7519.');
-    }
-  });
-})();
-</script>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Little Vietnam Colombo · <a href="index.html">Home</a></div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
