@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave a Review | Little Vietnam Colombo</title>
+<meta name="description" content="Tell us how we did at Little Vietnam Colombo. Your feedback helps other Christchurch locals find us.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav scrolled">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="brand-badge">L</span><span class="brand-name">Little Vietnam<small>Colombo · Christchurch</small></span></a>
+    <div class="nav-cta"><a class="btn btn-ghost" href="index.html">← Back to site</a></div>
+  </div>
+</header>
+
+<section class="review-stage">
+  <div class="wrap">
+    <div class="review-card">
+      <span class="badge-pill">Your feedback</span>
+      <h1>How was your visit?</h1>
+      <p>Tap a star to let us know. It only takes a second — and it means a lot to a small kitchen.</p>
+      <div class="star-pick" id="starPick">
+        <button data-v="1" aria-label="1 star">★</button>
+        <button data-v="2" aria-label="2 stars">★</button>
+        <button data-v="3" aria-label="3 stars">★</button>
+        <button data-v="4" aria-label="4 stars">★</button>
+        <button data-v="5" aria-label="5 stars">★</button>
+      </div>
+      <p class="star-hint" id="starHint">Tap to rate from 1 to 5 stars</p>
+    </div>
+  </div>
+</section>
+
+<script>
+// 4–5 stars -> public Google review; 1–3 -> private feedback form
+var GOOGLE_REVIEW_URL = "https://g.page/r/PLACEHOLDER";
+var pick = document.getElementById('starPick');
+var hint = document.getElementById('starHint');
+var btns = Array.prototype.slice.call(pick.querySelectorAll('button'));
+btns.forEach(function (b) {
+  b.addEventListener('mouseenter', function () { light(+b.dataset.v); });
+  b.addEventListener('focus', function () { light(+b.dataset.v); });
+  b.addEventListener('click', function () {
+    var v = +b.dataset.v;
+    light(v);
+    if (v >= 4) { hint.textContent = 'Thank you! Taking you to Google…'; setTimeout(function(){ window.location.href = GOOGLE_REVIEW_URL; }, 650); }
+    else { hint.textContent = 'Thanks — we\'d love to hear more.'; setTimeout(function(){ window.location.href = 'private.html?rating=' + v; }, 500); }
+  });
+});
+pick.addEventListener('mouseleave', function () { light(0); });
+function light(n) { btns.forEach(function (b) { b.classList.toggle('lit', +b.dataset.v <= n); }); }
+</script>
+</body>
+</html>
